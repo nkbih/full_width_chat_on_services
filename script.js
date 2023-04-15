@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         ChatGPT Custom Width
+// @name         ChatGPT Dialog Area Expander
 // @namespace    http://tampermonkey.net/
-// @version      0.2
-// @description  Change message width on ChatGPT
+// @version      0.1
+// @description  Expand the chat dialog area on chat.openai.com
 // @author       You
 // @match        https://chat.openai.com/*
 // @grant        none
@@ -22,8 +22,18 @@
         }
 
         .group .text-base {
-            padding-left: 30px !important;
-            padding-right: 30px !important;
+            padding-left: 100px !important;
+            padding-right: 100px !important;
+        }
+
+        /* Set the flex-basis for the left panel */
+        #__next > div.overflow-hidden.w-full.h-full.relative.flex > div.dark.hidden.bg-gray-900.md\\:flex.md\\:w-\\[260px\\].md\\:flex-col {
+            flex-basis: 350px !important;
+        }
+
+        /* Set the flex-basis for the chat panel */
+        #__next > div.overflow-hidden.w-full.h-full.relative.flex > main {
+            flex-basis: calc(100% - 350px) !important;
         }
     `;
 
