@@ -13,27 +13,19 @@
 
     const style = document.createElement('style');
     style.innerHTML = `
-        .group {
-            max-width: 100% !important;
-        }
-
-        .text-base {
-            max-width: 100% !important;
-        }
-
-        .group .text-base {
-            padding-left: 100px !important;
-            padding-right: 100px !important;
-        }
 
         /* Set the flex-basis for the left panel */
         #__next > div.overflow-hidden.w-full.h-full.relative.flex > div.dark.hidden.bg-gray-900.md\\:flex.md\\:w-\\[260px\\].md\\:flex-col {
             flex-basis: 350px !important;
         }
 
-        /* Set the flex-basis for the chat panel */
-        #__next > div.overflow-hidden.w-full.h-full.relative.flex > main {
-            flex-basis: calc(100% - 350px) !important;
+        .text-base {
+            max-width: 80% !important;
+        }
+
+        .group .text-base {
+            padding-left: 100px !important;
+            padding-right: 100px !important;
         }
     `;
 
